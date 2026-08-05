@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Serpin Consulting — несие, ипотека, автокредит және бизнеске қаржыландыру бойынша кеңес беру." />
+  <title>Serpin Consulting — Қаржылық консалтинг</title>
+  <style>
+    :root{
+      --green-950:#03170c;
+      --green-900:#062514;
+      --green-800:#0a3a20;
+      --green-700:#0e4a28;
+      --gold:#d5b45a;
+      --gold-2:#f3dc8a;
+      --cream:#fff9e9;
+      --muted:#cbd8cf;
+      --card:rgba(255,255,255,.055);
+      --line:rgba(213,180,90,.24);
+      --shadow:0 24px 70px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+      color:#fff;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(20,107,58,.22), transparent 30%),
+        radial-gradient(circle at 90% 0%, rgba(213,180,90,.09), transparent 28%),
+        linear-gradient(160deg,var(--green-950),var(--green-900) 45%,#071f12);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,calc(100% - 36px));margin-inline:auto}
+    .nav{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(3,23,12,.72);
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.08em}
+    .brand-mark{width:38px;height:38px;border:1px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-family:Georgia,serif;font-size:22px}
+    .brand span{font-size:15px}.brand small{display:block;font-size:9px;letter-spacing:.28em;color:var(--gold);font-weight:600}
+    .nav-links{display:flex;gap:26px;color:#dce7df;font-size:14px}
+    .nav-links a:hover{color:var(--gold-2)}
+    .nav-cta{padding:12px 18px;border:1px solid var(--gold);border-radius:999px;color:var(--gold-2);font-weight:700;font-size:14px}
+    .hero{padding:76px 0 60px;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:auto -12% -25% 35%;height:420px;background:linear-gradient(120deg,transparent,rgba(20,88,48,.26),transparent);transform:rotate(-10deg);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:60px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--gold-2);text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:800}
+    .eyebrow:before{content:"";width:34px;height:1px;background:var(--gold)}
+    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,6vw,78px);line-height:1.02;margin:22px 0 24px;font-weight:500;letter-spacing:-.025em}
+    h1 span{color:var(--gold-2)}
+    .hero p{font-size:18px;color:#d4e1d7;max-width:680px;margin:0 0 32px}
+    .actions{display:flex;flex-wrap:wrap;gap:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:14px;font-weight:800;transition:.25s transform,.25s background,.25s border}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#17331f;box-shadow:0 14px 40px rgba(213,180,90,.2)}
+    .btn-secondary{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.04)}
+    .hero-card{padding:12px;border:1px solid rgba(213,180,90,.18);border-radius:32px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.015));box-shadow:var(--shadow);position:relative}
+    .hero-card img{border-radius:24px;aspect-ratio:16/10;object-fit:cover}
+    .hero-badge{position:absolute;left:-22px;bottom:28px;background:rgba(4,28,15,.92);border:1px solid var(--line);border-radius:18px;padding:16px 18px;box-shadow:var(--shadow)}
+    .hero-badge b{display:block;color:var(--gold-2);font-size:24px}.hero-badge span{font-size:12px;color:var(--muted)}
+    section{padding:86px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}
+    .section-head h2{font-family:Georgia,serif;font-size:clamp(34px,4vw,52px);font-weight:500;margin:8px 0 0}
+    .section-head p{max-width:520px;color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:26px;min-height:220px;transition:.25s transform,.25s border-color,.25s background}
+    .card:hover{transform:translateY(-5px);border-color:var(--line);background:rgba(255,255,255,.075)}
+    .icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(213,180,90,.12);border:1px solid var(--line);font-size:22px;margin-bottom:18px}
+    .card h3{margin:0 0 10px;font-size:20px}.card p{margin:0;color:var(--muted)}
+    .amount{display:inline-block;margin-top:18px;color:var(--gold-2);font-weight:900}
+    .why{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}
+    .why-panel{border-radius:26px;padding:34px;background:linear-gradient(145deg,rgba(213,180,90,.12),rgba(255,255,255,.025));border:1px solid var(--line)}
+    .why-panel h2{font-family:Georgia,serif;font-size:46px;font-weight:500;margin:0 0 18px}
+    .why-panel p{color:#d6e2d9}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .stat{padding:24px;border-radius:20px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)}
+    .stat b{display:block;font-size:30px;color:var(--gold-2);font-family:Georgia,serif}.stat span{color:var(--muted);font-size:14px}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{padding:24px;border-top:1px solid var(--gold);background:linear-gradient(180deg,rgba(213,180,90,.07),transparent);border-radius:0 0 18px 18px}
+    .step-num{color:var(--gold-2);font-weight:900;font-size:12px;letter-spacing:.16em}.step h3{margin:12px 0 8px}.step p{color:var(--muted);margin:0;font-size:14px}
+    .notice{margin-top:26px;padding:20px 22px;border:1px solid rgba(213,180,90,.25);background:rgba(213,180,90,.07);border-radius:18px;color:#e6ecdf}
+    .contact{display:grid;grid-template-columns:1fr .85fr;gap:24px}
+    .contact-card{padding:34px;border-radius:26px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+    .contact-card h2{font-family:Georgia,serif;font-size:44px;font-weight:500;margin:0 0 14px}
+    .contact-list{display:grid;gap:14px;margin:24px 0}
+    .contact-item{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+    .contact-item strong{display:block}.contact-item span{color:var(--muted);font-size:14px}
+    .map{min-height:420px;border-radius:26px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#0c3b22,#071d11);display:grid;place-items:center;text-align:center;padding:30px}
+    .map b{font-family:Georgia,serif;font-size:36px;color:var(--gold-2)}
+    footer{padding:34px 0 42px;border-top:1px solid rgba(255,255,255,.07);color:#aebeb3;font-size:13px}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .mobile-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.16);color:white;border-radius:10px;padding:8px 10px}
+    @media(max-width:900px){
+      .hero-grid,.why,.contact{grid-template-columns:1fr}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .process{grid-template-columns:repeat(2,1fr)}
+      .hero-card{max-width:720px}
+      .hero-badge{left:18px}
+      .nav-links{display:none;position:absolute;top:76px;left:0;right:0;padding:18px;background:#072616;flex-direction:column;border-bottom:1px solid rgba(255,255,255,.08)}
+      .nav-links.open{display:flex}.mobile-toggle{display:block}.nav-cta{display:none}
+    }
+    @media(max-width:620px){
+      .container{width:min(100% - 24px,1160px)}
+      .hero{padding-top:48px}.cards,.process,.stats{grid-template-columns:1fr}
+      .section-head{align-items:flex-start;flex-direction:column}
+      section{padding:66px 0}
+      .hero-badge{position:static;margin:12px 0 0}
+      .actions{flex-direction:column}.btn{width:100%}
+      h1{font-size:46px}.contact-card,.why-panel{padding:26px}
+      .footer-row{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Serpin Consulting">
+        <span class="brand-mark">S</span>
+        <span>SERPIN<small>CONSULTING</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">Қызметтер</a>
+        <a href="#advantages">Артықшылықтар</a>
+        <a href="#process">Қалай жұмыс істейміз</a>
+        <a href="#contacts">Байланыс</a>
+      </nav>
+      <a class="nav-cta" href="tel:+77760900904">+7 776 090 09 04</a>
+      <button class="mobile-toggle" id="menuBtn" aria-label="Мәзір">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Қаржылық консалтинг</div>
+          <h1>Қаржыландыруға жолды <span>бізбен бірге</span> ашыңыз</h1>
+          <p>Serpin Consulting жеке тұлғаларға, кәсіпкерлерге және компанияларға несие, ипотека және автокредит бойынша тиімді шешім табуға көмектеседі.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/77760900904?text=Сәлеметсіз%20бе!%20Маған%20қаржыландыру%20бойынша%20кеңес%20керек." target="_blank" rel="noopener">WhatsApp арқылы кеңес алу</a>
+            <a class="btn btn-secondary" href="#services">Қызметтерді көру</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="serpin-brand.png" alt="Serpin Consulting фирмалық белгісі" />
+          <div class="hero-badge"><b>5–100 млн ₸</b><span>Сіздің жағдайыңызға сай шешім</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">Біздің қызметтер</div><h2>Сізге арналған қаржылық шешімдер</h2></div>
+          <p>Әр өтінім жеке қаралады. Біз құжаттарды дайындауға, талаптарды түсіндіруге және қолайлы бағдарламаны таңдауға көмектесеміз.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">₸</div><h3>Табысы расталмаған жағдайда</h3><p>Ресми табысы немесе зейнетақы аударымы жоқ клиенттерге қолжетімді нұсқаларды қарастырамыз.</p><span class="amount">5 млн ₸ дейін</span></article>
+          <article class="card"><div class="icon">✓</div><h3>Ресми табыс бар болса</h3><p>Тұрақты табысы және зейнетақы аударымдары бар клиенттерге несие рәсімдеуге қолдау көрсетеміз.</p><span class="amount">10 млн ₸ дейін</span></article>
+          <article class="card"><div class="icon">↗</div><h3>ИП және ТОО үшін</h3><p>Бизнесті дамытуға, айналым қаражатына және инвестициялық мақсаттарға қаржыландыру іздейміз.</p><span class="amount">10–100 млн ₸</span></article>
+          <article class="card"><div class="icon">⌂</div><h3>Ипотека</h3><p>Бастапқы жарна мен төлем мүмкіндігіңізге сай тұрғын үй бағдарламасын таңдауға көмектесеміз.</p><span class="amount">30–50% бастапқы жарна</span></article>
+          <article class="card"><div class="icon">◈</div><h3>Автокредит</h3><p>Жаңа немесе қолданыстағы автокөлікті сатып алуға арналған қаржыландыру нұсқаларын қарастырамыз.</p><span class="amount">Жеке есептеу</span></article>
+          <article class="card"><div class="icon">◎</div><h3>Толық сүйемелдеу</h3><p>Алғашқы кеңестен бастап өтінім нәтижесіне дейін процесті түсінікті әрі жүйелі түрде жүргіземіз.</p><span class="amount">Жеке менеджер</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages">
+      <div class="container why">
+        <div class="why-panel">
+          <div class="eyebrow">Неліктен біз</div>
+          <h2>Сенім. Тәжірибе. Нәтижеге бағыт.</h2>
+          <p>Біз клиенттің жағдайын алдын ала бағалап, құжаттардағы әлсіз тұстарды анықтап және уақыт жоғалтпай тиімді бағыт ұсынуға тырысамыз.</p>
+          <div class="notice"><strong>Маңызды:</strong> соңғы 2 жыл ішінде займ, ломбард немесе несие бойынша кешіктірілген төлем болмауы қажет.</div>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>Жеке тәсіл</b><span>Әр клиенттің табысы, мақсаты және кредиттік тарихы бөлек бағаланады.</span></div>
+          <div class="stat"><b>Жылдам байланыс</b><span>Алғашқы консультацияны телефон немесе WhatsApp арқылы алуға болады.</span></div>
+          <div class="stat"><b>Құжаттарға көмек</b><span>Қажетті құжаттар тізімін және рәсімдеу тәртібін түсіндіреміз.</span></div>
+          <div class="stat"><b>Ашық шарттар</b><span>Қызмет көрсету тәртібі мен ықтимал шығындар алдын ала талқыланады.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head"><div><div class="eyebrow">4 қадам</div><h2>Қалай жұмыс істейміз</h2></div></div>
+        <div class="process">
+          <div class="step"><div class="step-num">01 / ӨТІНІМ</div><h3>Байланыс</h3><p>Телефон немесе WhatsApp арқылы сұранысыңызды қалдырасыз.</p></div>
+          <div class="step"><div class="step-num">02 / ТАЛДАУ</div><h3>Алдын ала бағалау</h3><p>Табысыңыз, мақсатыңыз және кредиттік тарихыңыз қаралады.</p></div>
+          <div class="step"><div class="step-num">03 / ДАЙЫНДЫҚ</div><h3>Құжаттарды жинау</h3><p>Сәйкес бағдарлама таңдалып, қажетті құжаттар дайындалады.</p></div>
+          <div class="step"><div class="step-num">04 / НӘТИЖЕ</div><h3>Сүйемелдеу</h3><p>Өтінім беру және шешім алу кезеңінде сізбен бірге боламыз.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts">
+      <div class="container contact">
+        <div class="contact-card">
+          <div class="eyebrow">Байланыс</div>
+          <h2>Кеңес алуға дайынсыз ба?</h2>
+          <p style="color:var(--muted)">Бізге хабарласыңыз — жағдайыңызды қысқаша талқылап, келесі қадамды айтамыз.</p>
+          <div class="contact-list">
+            <div class="contact-item"><div class="icon" style="margin:0">☎</div><div><strong><a href="tel:+77760900904">+7 776 090 09 04</a></strong><span>Телефон және WhatsApp</span></div></div>
+            <div class="contact-item"><div class="icon" style="margin:0">⌖</div><div><strong>Байтурсынова көшесі, 35/7</strong><span>ЖК «Ханзада», Шымкент қаласы</span></div></div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/77760900904?text=Сәлеметсіз%20бе!%20Кеңеске%20жазылғым%20келеді." target="_blank" rel="noopener">WhatsApp-қа жазу</a>
+            <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Байтурсынова+35%2F7+Шымкент" target="_blank" rel="noopener">Маршрут құру</a>
+          </div>
+        </div>
+        <a class="map" href="https://www.google.com/maps/search/?api=1&query=Байтурсынова+35%2F7+Шымкент" target="_blank" rel="noopener">
+          <div><div style="font-size:48px">⌖</div><b>Шымкент</b><p>Байтурсынова көшесі, 35/7<br>ЖК «Ханзада»</p><span style="color:var(--gold-2);font-weight:800">Картадан ашу →</span></div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© 2026 Serpin Consulting. Барлық құқықтар қорғалған.</div>
+      <div>Қаржыландыру туралы шешімді тиісті қаржы ұйымы қабылдайды. Мақұлдау кепілдендірілмейді.</div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  </script>
+</body>
+</html>
